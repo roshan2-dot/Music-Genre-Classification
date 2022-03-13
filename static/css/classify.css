@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding:0px
+}
+/*To use the custom font*/
+@font-face {
+	font-family: 'sansation_regular';
+	src: url("/static/fonts/sansation_regular.ttf");
+}
+body{
+    background-image: url("/static/images/wallpaper2.jpg");
+    padding: 5px;
+    background-repeat: no-repeat;
+    background-size: 1400px 700px;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.main_title{
+    display:inline-block;
+}
+.main_title h1{
+    font-size:30px;
+    font-family:sansation_regular,sans-serif;
+    color: #ffff;
+    display: inline-block;
+    letter-spacing: 2px;
+    padding: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/*Navigation bar*/
+.wrapper {
+    height: 65px;
+    display: inline-block;
+    align-items: center;
+    justify-content:center;
+    margin-left: 9.5cm;
+    font-family: sansation_regular,sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  
+  nav {
+    display: flex;
+    width: 90%;
+  }
+  
+  ul li a {
+    margin-left: 2.5em;
+    padding-bottom: 4px;
+  }
+  
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+  }
+  
+  a::after {
+    content:"";
+    top: 80%;
+    border-bottom: 1.5px solid #ffffff;
+    transition: all 0.50s;
+    position: absolute;
+  }
+  
+  a:hover::after {
+    transition: all 0.50s;
+  }
+  
+  a::after {
+    right: 50%;
+    left: 50%;
+  }
+  
+  a:hover::after {
+    right: 0;
+    left: 0;
+  }
+  /*Styling Hamburger*/
+  .hamburger div{
+    width: 30px;
+    height: 3px;
+    background: #f2f5f7;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  .hamburger{
+    display: none;
+  }
+
+/*Navigation ends*/
+
+/*Drag Info*/
+.drag_info h5{
+    font-size: 20px;
+    font-family: sansation_regular,sans-serif;
+    color: #ffff;
+    margin-top: 100px;
+    margin-left: 25%;
+    font-weight: 100;
+    font-style: justify;
+}
+.drag_info h6{
+    font-size: 20px;
+    font-family: sansation_regular,sans-serif;
+    color: #ffff;
+    margin-top: 10px;
+    margin-left: 35%;
+    font-weight: 100;
+    font-style: justify;
+}
+
+/*Drag and Drop Area*/
+.dropzone.dz{
+  border-style: dashed!important;
+  border-color: #ffffff!important;
+  border-radius: 20px; 
+  background-color: #f17090;
+  height: 300px;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 30px;
+}
+.dz-message{
+  font-family: sansation_regular,sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 50px;
+}
+.dz:hover{
+  background-color:#51bd71;
+  ;
+}
+
+/*Drag and Drop area Ends*/
+
+   /*Responsive part*/
+
+   @media (max-width: 1024px) {
+    .main_title h1{
+      font-size: 14px;
+    }
+    .wrapper {
+      height: auto;
+    }
+    nav{
+      
+      z-index: 3;
+    }
+    .hamburger{
+      display: block;
+      position: absolute;
+      cursor: pointer;
+      right: 5%;
+      padding-bottom: 20%;
+      transform: translate(-5%, -50%);
+      z-index: 2;
+      transition: all 0.7s ease;
+    }
+    .navbar-nav{
+      position: fixed;
+      background: #217bc5;
+      height: 100vh;
+      width: 100%;
+      flex-direction: column;
+      clip-path: circle(50px at 90% -20%);
+      -webkit-clip-path: circle(50px at 90% -10%);
+      transition: all 1s ease-out;
+      pointer-events: none;
+    }
+    .navbar-nav.open{
+      clip-path: circle(1000px at 90% -10%);
+      -webkit-clip-path: circle(1000px at 90% -10%);
+      pointer-events: all;
+      right: 1%
+    }
+    .navbar-nav li{
+      opacity: 0;
+      padding-bottom: 20px;
+      padding-left: 20%;
+    }
+    .navbar-nav li:nth-child(1){
+      transition: all 0.5s ease 0.2s;
+    }
+    .navbar-nav li:nth-child(2){
+      transition: all 0.5s ease 0.4s;
+    }
+    .navbar-nav li:nth-child(3){
+      transition: all 0.5s ease 0.6s;
+    }
+    .navbar-nav li:nth-child(4){
+      transition: all 0.5s ease 0.7s;
+    }
+    li.fade{
+      opacity: 1;
+    }
+  }
+
+/*Animating Hamburger Icon on Click*/
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+  transition: all 0.7s ease;
+  width:0;
+}
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px,-6px);
+}
+

@@ -1,0 +1,103 @@
+*{
+  margin: 0;
+  padding:0px
+}
+/*To use the custom font*/
+@font-face {
+font-family: 'sansation_regular';
+src: url("/static/fonts/sansation_regular.ttf");
+}
+body{
+  background-image: url("/static/images/wallpaper2.jpg");
+  padding: 5px;
+  background-repeat: no-repeat;
+  background-size: 1400px 700px;
+  -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+.main_title{
+  display:inline-block;
+}
+.main_title h1{
+  font-size:30px;
+  font-family:sansation_regular,sans-serif;
+  color: #ffff;
+  display: inline-block;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 15px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+/*Navigation bar*/
+.wrapper {
+  height: 65px;
+  display: inline-block;
+  align-items: center;
+  justify-content:center;
+  margin-left: 25cm;
+  font-family: sansation_regular,sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav {
+  display: flex;
+  width: 90%;
+}
+
+ul li a {
+  margin-left: 2.5em;
+  padding-bottom: 4px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  position: relative;
+}
+
+a::after {
+  content:"";
+  top: 80%;
+  border-bottom: 1.5px solid #ffffff;
+  transition: all 0.50s;
+  position: absolute;
+}
+
+a:hover::after {
+  transition: all 0.50s;
+}
+
+a::after {
+  right: 50%;
+  left: 50%;
+}
+
+a:hover::after {
+  right: 0;
+  left: 0;
+}
+  /*Styling Hamburger*/
+  .hamburger div{
+    width: 30px;
+    height: 3px;
+    background: #f2f5f7;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  .hamburger{
+    display: none;
+  }
+
+/*Navigation bar ends*/
