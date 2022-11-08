@@ -55,8 +55,8 @@ def model_form_upload(request):
 
     return render(request,'result.html',{'documents':documents,'form':form})
 
-def handle_not_found(request, exception):
-    return render(request, '404_error.html', status=404)
+#def handle_not_found(request, exception):
+    #return render(request, '404_error.html', status=404)
 
 #def handle_server_error(request):
     #return render(request, '500_error.html', status=500)

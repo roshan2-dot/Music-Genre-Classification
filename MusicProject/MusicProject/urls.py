@@ -29,7 +29,7 @@ urlpatterns = [
 ]   
 
 #Handeling 404 error
-handler404 = 'MusicApp.views.handle_not_found'
+#handler404 = 'MusicApp.views.handle_not_found'
 
 #Handeling 500 error
 #handler500 = 'MusicApp.views.handle_server_error'
