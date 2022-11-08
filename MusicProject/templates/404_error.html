@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Error</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/error.css'%}">
+</head>
+<body>
+    <div class="container">
+        <div class="error">
+            <h1>404</h1>
+            <h2>Page Not Found</h2>
+            <p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+            <a href="{% url 'home' %}">Go to Home</a>
+        </div>
+</body>
+
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: #e6f2ff;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .container{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .error{
+        width: 500px;
+        height: 400px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+        text-align: center;
+        padding: 20px;
+    }
+    .error h1{
+        font-size: 100px;
+        font-weight: 700;
+        color: #e6f2ff;
+        background-color: #ff4d4d;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        border-radius: 50%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .error h2{
+        font-size: 30px;
+        font-weight: 700;
+        color: #ff4d4d;
+        margin-bottom: 20px;
+    }
+    .error p{
+        font-size: 16px;
+        font-weight: 400;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    .error a{
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+        background-color: #ff4d4d;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: 0.5s;
+    }
+    .error a:hover{
+        background-color: #ff3333;
+    }
+</style>
+</html>
