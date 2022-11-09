@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-3sm59zks_zu72=p&=1x!*qjw--r0e$yl%g=5hq&61q!w(q+f!i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','']
+ALLOWED_HOSTS = ['127.0.0.1','classifymusic.herokuapp.com/']
 
 
 # Application definition
