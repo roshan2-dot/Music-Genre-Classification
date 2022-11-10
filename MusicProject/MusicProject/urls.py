@@ -15,13 +15,12 @@ Including another URLconf
 """
 from django import views
 from django.contrib import admin
-from django.urls import path
+from django.urls import path , re_path
 from django.urls.conf import include
 from MusicApp.views import model_form_upload
 from django.conf import settings
 from django.conf.urls.static import static
 
-from django.conf.urls import url
 from django.views.static import serve
 
 
@@ -32,8 +31,8 @@ urlpatterns = [
     path('',include('MusicApp.urls')),
     path('result/', model_form_upload, name='result'),
 
-    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
+    re_path(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
+    re_path(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
 ]   
 
 #Handeling 404 error
