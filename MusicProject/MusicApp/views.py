@@ -21,8 +21,6 @@ def about(request):
     return render(request,'about.html')
 
 def result(request):
-        #my_model = keras.models.load_model('model\Music_Genre_10_CNN.h5')
-        
     return render(request,'result.html')
 
 def model_form_upload(request):
